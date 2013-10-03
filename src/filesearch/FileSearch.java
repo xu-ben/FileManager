@@ -365,11 +365,11 @@ public class FileSearch extends JDialog implements MouseListener {
 	public static String getExplorerPath() {
 		File[] files = File.listRoots();
 		String explore = "windows/explorer.exe";
-		for (int i = 0; i < files.length; i++) {
+		for (int i = 1; i < files.length; i++) {
 			String pf = files[i].getAbsolutePath();
 			File f = new File(pf + explore);
 			if (f.exists()) {
-//				System.out.println(pf + explore1);
+//				System.out.println(pf + explore);
 				return pf + explore;
 			}
 		}
